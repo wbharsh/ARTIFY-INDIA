@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ARTBOND INDIA — Our Journey in Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* (The CSS styles remain the same, so I'm omitting them here for brevity) */
+        /* --- CSS STYLES --- */
+
+        /* --- Global Styles & Reset --- */
+        :root {
+            --color-primary: #581c87; /* Deep Artistic Violet/Indigo */
+            --color-secondary: #fcd34d; /* Gold Accent */
+            --color-dark: #1e1e2d; /* Rich Dark Background */
+            --color-light: #f7f3f9; /* Off-white with a hint of warmth */
+            --color-text: #4a4e69; /* Muted Dark Text */
+            --font-headline: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-body);
+        }
+
+        body {
+            background-color: var(--color-light);
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* --- Header/Navbar (Reused from Home Page) --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #fff;
+            border-bottom: 2px solid var(--color-primary);
+        }
+
+        .logo {
+            font-family: var(--font-headline);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--color-primary);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--color-text);
+            margin-left: 30px;
+            font-weight: 600;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .navbar a:hover {
+            color: var(--color-primary);
+        }
+
+        /* --- Page Hero Section with Background Image --- */
+        .page-hero {
+            position: relative;
+            height: 450px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            /* Placeholder for the background image */
+            /* CORRECTED LINE: Used url_for() correctly here */
+            /* background-image: url('path/to/about_hero_background.jpg'); */
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .page-hero-content h1 {
+            font-family: var(--font-headline);
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .page-hero-content p {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* --- Content Section Styling --- */
+        .content-section {
+            padding: 80px 5%;
+            background-color: white;
+        }
+
+        .content-block {
+            margin-bottom: 60px;
+        }
+
+        .content-block h2 {
+            font-family: var(--font-headline);
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .content-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .content-row.reverse {
+            flex-direction: row-reverse; /* For alternating layouts */
+        }
+
+        .content-text {
+            flex: 2;
+            font-size: 1.05rem;
+        }
+
+        .content-image {
+            flex: 1;
+            min-width: 300px; /* Ensure image doesn't get too small */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .content-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .mission-vision-item {
+            background-color: var(--color-light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--color-secondary); /* Accent border */
+        }
+
+        .mission-vision-item h3 {
+            font-family: var(--font-headline);
+            font-size: 1.8rem;
+            color: var(--color-dark);
+            margin-bottom: 15px;
+        }
+
+        .what-we-do ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .what-we-do li {
+            background-color: #f0f2f5;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 3px solid var(--color-primary);
+        }
+
+        .what-we-do li::before {
+            content: '🎨'; /* Artistic bullet point */
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+
+        /* --- Footer (Reused from Home Page) --- */
+        footer {
+            background-color: var(--color-dark);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 40px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        footer p:first-child {
+            font-family: var(--font-headline);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- Media Queries --- */
+        @media (max-width: 992px) {
+            .page-hero-content h1 {
+                font-size: 2.8rem;
+            }
+            .content-row {
+                flex-direction: column; /* Stack image and text */
+            }
+            .content-row.reverse {
+                flex-direction: column; /* Maintain stacking */
+            }
+            .mission-vision-grid {
+                grid-template-columns: 1fr; /* Stack mission/vision */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar nav {
+                display: none;
+            }
+            .page-hero {
+                height: 350px;
+            }
+            .page-hero-content h1 {
+                font-size: 2rem;
+            }
+            .page-hero-content p {
+                font-size: 1rem;
+            }
+            .content-block h2 {
+                font-size: 2rem;
+            }
+            .what-we-do ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">ARTBOND INDIA</div>
+        <nav>
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT</a>
+            <a href="/gallery">GALLERY</a>
+            <a href="/corporate">CORPORATE</a>
+            <a href="/custom">COMMISSION</a>
+            <a href="/contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <section class="page-hero" style="background-image: url({{ url_for('static', filename='about.png') }});">
+        <div class="page-hero-content">
+            <h1>Our Creative Journey at ARTBOND INDIA</h1>
+            <p>Where passion meets purpose, crafting narratives on every canvas and wall.</p>
+        </div>
+    </section>
+
+    <section class="content-section container">
+        <div class="content-block">
+            <h2>Our Story: The Genesis of Inspiration</h2>
+            <div class="content-row">
+                <div class="content-text">
+                    <p>ARTBOND INDIA was born from a singular, vibrant dream: to weave together India’s ancient, rich art culture with the dynamic pulse of modern design, presenting it all on a seamless, inspiring platform. We are not just a team; we are a collective of young designers, visionary creators, and discerning curators. Our hands and hearts are dedicated to crafting artworks that transcend mere decoration, transforming any space into a profound story, a personal gallery.</p>
+                    <p>Every piece we offer, every custom creation we undertake, is a testament to the boundless creativity that resides within India. We believe art should be an accessible, living entity, capable of resonating deeply with individuals and enriching the identity of businesses.</p>
+                </div>
+                <div class="content-image">
+                    <img src="{{ url_for('static', filename='about1.png') }}">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block mission-vision-grid">
+            <div class="mission-vision-item">
+                <h3>Our Mission: Bridging Art & Life</h3>
+                <p>To make premium, soulful wall art universally accessible, deeply customizable, and thoughtfully affordable for every home, office, and business, fostering a deeper connection with art.</p>
+            </div>
+            <div class="mission-vision-item">
+                <h3>Our Vision: Walls That Speak</h3>
+                <p>To cultivate a world where every wall is a vibrant reflection of identity, a celebration of beauty, a canvas for culture, and a testament to boundless creativity.</p>
+            </div>
+        </div>
+
+        <div class="content-block what-we-do">
+            <h2>What We Offer: Our Artistic Spectrum</h2>
+            <ul>
+                <li>Ready-made curated masterpieces</li>
+                <li>Bespoke custom artwork & commissions</li>
+                <li>Artistic branding & bespoke décor solutions</li>
+                <li>Bulk/Corporate art for grand interiors</li>
+                <li>Empowering artist collaborations</li>
+                <li>Thoughtful corporate gifting art pieces</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>ARTBOND INDIA</p>
+        <p>The Canvas of India | Custom Commissions | Corporate Art Solutions</p>
+        <p>© 2025 ArtBond India — All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

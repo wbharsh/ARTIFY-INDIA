@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ARTBOND INDIA</title>
+    <!-- Load custom fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS STYLES (Copied from Home Page) --- */
+
+        /* --- Global Styles & Reset --- */
+        :root {
+            --color-primary: #581c87; /* Deep Artistic Violet/Indigo */
+            --color-secondary: #fcd34d; 
+            --color-dark: #1e1e2d;
+            --color-light: #f7f3f9; 
+            --color-text: #4a4e69; 
+            --font-headline: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-body);
+        }
+
+        body {
+            background-color: var(--color-light);
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* --- Header/Navbar --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #fff;
+            border-bottom: 2px solid var(--color-primary);
+        }
+
+        .logo {
+            font-family: var(--font-headline);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--color-primary);
+        }
+
+        .navbar nav {
+            display: flex; /* Ensure navigation links are visible on desktop */
+        }
+        
+        .navbar a {
+            text-decoration: none;
+            color: var(--color-text);
+            margin-left: 30px;
+            font-weight: 600;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--color-primary);
+        }
+
+        .navbar a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary);
+        }
+        
+        /* --- Utility Classes for Layout --- */
+        .page-header {
+            background-color: var(--color-dark);
+            padding: 80px 5%;
+            text-align: center;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-headline);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #d8c2e3;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- Contact Grid Layout --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            min-height: 600px;
+        }
+
+        /* --- Contact Info Panel (Left Side) --- */
+        .info-panel {
+            background-color: var(--color-dark);
+            color: white;
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+            /* Using the uploaded image as a subtle background texture */
+            background-image: linear-gradient(rgba(30, 30, 45, 0.85), rgba(30, 30, 45, 0.95)), url('/static/image_af9b6d.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .info-panel h2 {
+            font-family: var(--font-headline);
+            font-size: 2rem;
+            color: var(--color-secondary);
+            margin-bottom: 25px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .contact-detail svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            color: var(--color-secondary);
+            flex-shrink: 0;
+        }
+
+        .contact-detail p, .contact-detail a {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+        
+        .contact-detail a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* --- Contact Form (Right Side) --- */
+        .form-panel {
+            padding: 40px;
+        }
+        
+        .form-panel h2 {
+            font-family: var(--font-headline);
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--color-text);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(88, 28, 135, 0.2);
+        }
+
+        /* --- Button Styling --- */
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(88, 28, 135, 0.4);
+        }
+
+        .btn-submit:hover {
+            background-color: #4a1577; /* Slightly darker primary */
+            box-shadow: 0 8px 20px rgba(88, 28, 135, 0.6);
+        }
+
+        .btn-submit.loading {
+            opacity: 0.7;
+            cursor: wait;
+        }
+
+        /* Status Message */
+        .status-message {
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .status-message.success {
+            background-color: #d1e7dd;
+            color: #0f5132;
+            border: 1px solid #badbcc;
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-panel {
+                border-radius: 12px 12px 0 0;
+            }
+            .form-panel {
+                border-radius: 0 0 12px 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar nav {
+                display: none; /* Hide desktop navigation links */
+            }
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            .page-header p {
+                font-size: 1rem;
+            }
+            .info-panel, .form-panel {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header/Navbar (Copied from Home Page) -->
+    <header class="navbar">
+        <div class="logo">ARTBOND INDIA</div>
+        <nav>
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT</a>
+            <a href="/gallery">GALLERY</a>
+            <a href="/corporate">CORPORATE</a>
+            <a href="/custom">COMMISSION</a>
+            <a href="/contact" class="active">CONTACT</a>
+        </nav>
+        <!-- For mobile, you would typically add a menu icon/button here -->
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 class="headline">Let's Connect and Create</h1>
+        <p>Whether it's a new commission, an order query, or a corporate project, we're ready to listen and respond promptly.</p>
+    </section>
+
+    <!-- Main Contact Content -->
+    <main class="container">
+        <div class="contact-grid">
+            
+            <!-- Contact Information Panel -->
+            <div class="info-panel">
+                <h2>Our Studio & Details</h2>
+                
+                <div class="contact-detail">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243m10.606 0a7 7 0 10-10.606 0m10.606 0L15.5 13.5m0 0l-1.5 1.5"></path></svg>
+                    <div>
+                        <p style="color:white; font-weight:600;">Address</p>
+                        <p>ArtBond India HQ,<br>303 Creative Hub, Mumbai, 400001, India</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-7"></path></svg>
+                    <div>
+                        <p style="color:white; font-weight:600;">Email Us</p>
+                        <a href="mailto:support@artbondindia.com" style="color:var(--color-secondary); font-weight:600; text-decoration: none;">support@artbondindia.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.128a11.042 11.042 0 005.516 5.516l1.128-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <div>
+                        <p style="color:white; font-weight:600;">Call or WhatsApp</p>
+                        <p>+91 98765 43210 (Mon-Sat, 10am - 7pm IST)</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <p style="color:#d8c2e3; font-style: italic;">We aim to respond to all inquiries within 24 hours.</p>
+                </div>
+            </div>
+
+            <!-- Contact Form Panel -->
+            <div class="form-panel">
+                <h2>Commission or General Inquiry?</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject (e.g., Commission Quote, Order #123)</label>
+                        <input type="text" name="subject" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Detailed Message</label>
+                        <textarea name="message" id="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <div id="statusMessage" class="status-message success" style="display:none;"></div>
+                    
+                    <button type="submit" id="submitButton" class="btn-submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <hr style="border: 0; border-top: 1px solid #ddd; margin-top: 60px;">
+
+    <!-- Footer (Copied from Home Page) -->
+    <footer style="background-color: var(--color-dark); color: #cbd5e1; text-align: center; padding: 40px; margin-top: 30px;">
+        <p style="font-family: var(--font-headline); font-size: 1.2rem; margin-bottom: 10px;">ARTBOND INDIA</p>
+        <p style="font-size: 0.9rem;">The Canvas of India | Custom Commissions | Corporate Art Solutions</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">© 2025 ArtBond India — All Rights Reserved</p>
+    </footer>
+
+
+    <script type="module">
+        // --- Firebase Configuration and Initialization (Mandatory Setup) ---
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global variables provided by the environment
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let app, db, auth;
+
+        /**
+         * Initializes Firebase and authenticates the user.
+         */
+        async function initializeFirebase() {
+            try {
+                if (Object.keys(firebaseConfig).length === 0) {
+                    console.error("Firebase configuration is missing. Running without DB features.");
+                    return;
+                }
+                
+                app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+                console.log("Firebase initialized and user authenticated.");
+            } catch (error) {
+                console.error("Error during Firebase initialization or authentication:", error);
+            }
+        }
+
+        // Initialize Firebase on window load
+        window.onload = initializeFirebase;
+
+
+        // --- Form Submission Logic (Client-side simulation) ---
+        const form = document.getElementById('contactForm');
+        const statusMessage = document.getElementById('statusMessage');
+        const submitButton = document.getElementById('submitButton');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.classList.add('loading');
+            submitButton.textContent = 'Sending Message...';
+
+            // Hide previous message
+            statusMessage.style.display = 'none';
+
+            // Simulate form submission success after a delay (2 seconds)
+            setTimeout(() => {
+                // Reset button state
+                submitButton.disabled = false;
+                submitButton.classList.remove('loading');
+                submitButton.textContent = 'Send Message';
+                
+                // Show success message
+                statusMessage.textContent = 'Message Sent! We will contact you within 24 hours.';
+                statusMessage.style.display = 'block';
+                statusMessage.classList.remove('text-red-700', 'bg-red-100');
+                statusMessage.classList.add('success');
+                
+                // Clear the form fields
+                form.reset();
+
+                // Hide message after 8 seconds
+                setTimeout(() => {
+                    statusMessage.style.display = 'none';
+                }, 8000);
+
+            }, 2000); 
+        });
+
+    </script>
+</body>
+</html>

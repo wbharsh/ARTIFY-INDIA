@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Art Commission | ARTBOND INDIA</title>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Tailwind Custom Configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#581c87', // Deep Artistic Violet/Indigo
+                        secondary: '#fcd34d', // Gold Accent
+                        dark: '#1e1e2d', // Rich Dark Background
+                        light: '#f7f3f9', // Off-white with a hint of warmth
+                        text: '#4a4e69', // Muted Dark Text
+                    },
+                    fontFamily: {
+                        headline: ['Playfair Display', 'serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: theme('colors.text');
+            line-height: 1.7;
+            background-color: theme('colors.light');
+        }
+        /* Icon styling */
+        .icon {
+            stroke: theme('colors.primary');
+            stroke-width: 1.5;
+        }
+        /* Custom number styling for the process steps */
+        .step-number {
+            background-color: theme('colors.secondary');
+            color: theme('colors.dark');
+            border: 3px solid theme('colors.primary');
+            width: 40px;
+            height: 40px;
+            line-height: 34px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 9999px;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Line for process on large screens */
+        .process-line::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: theme('colors.primary', '200');
+            z-index: 10;
+        }
+        
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <header class="flex justify-between items-center py-5 px-5 lg:px-10 bg-white border-b-2 border-primary shadow-lg">
+        <div class="font-headline text-2xl font-bold tracking-wider text-primary">ARTBOND INDIA</div>
+        <nav class="hidden sm:flex space-x-6">
+            <a href="/" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">HOME</a>
+            <a href="/about" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">ABOUT</a>
+            <a href="/gallery" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">GALLERY</a>
+            <a href="/corporate" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">CORPORATE</a>
+            <a href="/custom" class="text-primary font-bold text-sm uppercase transition duration-300 border-b-2 border-primary">COMMISSION</a>
+            <a href="/contact" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section: Custom Commission Header -->
+    <section class="bg-primary text-white py-16 px-5 text-center shadow-inner">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+            <div class="lg:w-1/2 lg:text-left mb-8 lg:mb-0">
+                <span class="text-secondary uppercase text-sm font-semibold tracking-widest mb-3 block">Your Vision, Our Canvas</span>
+                <h1 class="font-headline text-5xl sm:text-6xl mb-6 font-bold leading-tight">
+                    Create a Piece as <span class="text-secondary">Unique</span> as You Are
+                </h1>
+                <p class="text-xl opacity-80 max-w-xl mx-auto lg:mx-0">
+                    Commission an original work tailored specifically to your space, style, and personal story, crafted by India's finest artists.
+                </p>
+                <a href="#commission-form" class="inline-block mt-8 px-8 py-3 bg-secondary hover:bg-secondary/90 text-dark font-bold rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                    Start Your Inquiry Now
+                </a>
+            </div>
+            
+            <!-- Hero Image Placeholder -->
+            <div class="lg:w-5/12 w-full">
+                <img 
+                    src="static/5.png" 
+                    alt="Placeholder image for a bespoke art commission" 
+                    class="w-full h-auto object-cover rounded-xl shadow-2xl"
+                >
+            </div>
+        </div>
+    </section>
+    
+    <!-- The Commission Process Section -->
+    <section class="container mx-auto px-5 py-16">
+        <h2 class="font-headline text-4xl text-center text-dark mb-16 font-bold">The Simple 4-Step Process</h2>
+        
+        <div class="relative grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 process-line">
+            
+            <!-- Step 1: Consultation -->
+            <div class="relative bg-white p-6 pt-10 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-primary/50 text-center">
+                <span class="step-number">1</span>
+                <i data-lucide="message-square" class="icon w-8 h-8 mx-auto mb-4"></i>
+                <h3 class="font-bold text-xl mb-3 text-dark">Consult & Concept</h3>
+                <p class="text-sm text-gray-600">Share your inspiration, desired dimensions, color palettes, and budget. We'll match you with the perfect artist.</p>
+            </div>
+
+            <!-- Step 2: Design & Quote -->
+            <div class="relative bg-white p-6 pt-10 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-primary/50 text-center">
+                <span class="step-number">2</span>
+                <i data-lucide="pencil-ruler" class="icon w-8 h-8 mx-auto mb-4"></i>
+                <h3 class="font-bold text-xl mb-3 text-dark">Design & Quote</h3>
+                <p class="text-sm text-gray-600">The artist creates initial sketches and a proposal. Once approved, you confirm the project with a deposit.</p>
+            </div>
+
+            <!-- Step 3: Creation & Updates -->
+            <div class="relative bg-white p-6 pt-10 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-primary/50 text-center">
+                <span class="step-number">3</span>
+                <i data-lucide="brush" class="icon w-8 h-8 mx-auto mb-4"></i>
+                <h3 class="font-bold text-xl mb-3 text-dark">Creation & Updates</h3>
+                <p class="text-sm text-gray-600">The artwork comes to life! We provide regular photo and video updates for your feedback throughout the process.</p>
+            </div>
+
+            <!-- Step 4: Final Delivery -->
+            <div class="relative bg-white p-6 pt-10 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-primary/50 text-center">
+                <span class="step-number">4</span>
+                <i data-lucide="package-check" class="icon w-8 h-8 mx-auto mb-4"></i>
+                <h3 class="font-bold text-xl mb-3 text-dark">Final Delivery</h3>
+                <p class="text-sm text-gray-600">Upon completion and final payment, your unique masterpiece is securely packaged and delivered globally.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Featured Commission Examples (New Section with Images) -->
+    <section class="bg-primary/5 py-16 px-5">
+        <div class="container mx-auto">
+            <h2 class="font-headline text-4xl text-center font-bold text-dark mb-12">Featured Commission Examples</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Example 1 -->
+                <div class="rounded-xl overflow-hidden shadow-xl group cursor-pointer transform hover:scale-[1.02] transition duration-300">
+                    <img src="static/6.png" alt="Abstract painting example" class="w-full h-auto object-cover group-hover:opacity-90 transition duration-300">
+                </div>
+                <!-- Example 2 -->
+                <div class="rounded-xl overflow-hidden shadow-xl group cursor-pointer transform hover:scale-[1.02] transition duration-300">
+                    <img src="static/7.png" alt="Madhubani style portrait example" class="w-full h-auto object-cover group-hover:opacity-90 transition duration-300" >
+                </div>
+                <!-- Example 3 -->
+                <div class="rounded-xl overflow-hidden shadow-xl group cursor-pointer transform hover:scale-[1.02] transition duration-300">
+                    <img src="static/8.png" alt="Modern landscape painting example" class="w-full h-auto object-cover group-hover:opacity-90 transition duration-300" >
+                </div>
+                <!-- Example 4 -->
+                <div class="rounded-xl overflow-hidden shadow-xl group cursor-pointer transform hover:scale-[1.02] transition duration-300 hidden md:block">
+                    <img src="static/9.png" alt="Wall mural concept example" class="w-full h-auto object-cover group-hover:opacity-90 transition duration-300"  >
+                </div>
+                <!-- Example 5 -->
+                <div class="rounded-xl overflow-hidden shadow-xl group cursor-pointer transform hover:scale-[1.02] transition duration-300 hidden md:block">
+                    <img src="static/2.png" alt="Geometric minimalist art example" class="w-full h-auto object-cover group-hover:opacity-90 transition duration-300" >
+                </div>
+                <!-- Example 6 -->
+                <div class="rounded-xl overflow-hidden shadow-xl group cursor-pointer transform hover:scale-[1.02] transition duration-300 hidden md:block">
+                    <img src="static/3.webp" alt="Metal sculpture example" class="w-full h-auto object-cover group-hover:opacity-90 transition duration-300">
+                </div>
+            </div>
+            
+            <p class="text-center text-sm mt-8 text-gray-500">
+                These are placeholder concepts. Your commissioned piece will be 100% unique and tailored to your specifications.
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Types Section -->
+    <section class="bg-white py-16 px-5 shadow-inner">
+        <div class="container mx-auto">
+            <h2 class="font-headline text-4xl text-center font-bold text-dark mb-10">What Can We Create For You?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Type 1: Personal -->
+                <div class="text-center p-6 border-2 border-primary/10 rounded-xl">
+                    <i data-lucide="heart" class="icon w-8 h-8 mx-auto mb-3 text-secondary"></i>
+                    <h3 class="font-semibold text-2xl mb-2 text-dark">Personal Keepsakes</h3>
+                    <p class="text-sm text-gray-600">Unique portraits, wedding gifts, family histories rendered in traditional or contemporary styles (Madhubani, Tanjore, etc.).</p>
+                </div>
+
+                <!-- Type 2: Interior Design -->
+                <div class="text-center p-6 border-2 border-primary/10 rounded-xl">
+                    <i data-lucide="maximize" class="icon w-8 h-8 mx-auto mb-3 text-secondary"></i>
+                    <h3 class="font-semibold text-2xl mb-2 text-dark">Interior Design Focus</h3>
+                    <p class="text-sm text-gray-600">Large-format canvases, accent walls, and series designed to perfectly integrate into residential or commercial luxury spaces.</p>
+                </div>
+
+                <!-- Type 3: Sculpture/3D -->
+                <div class="text-center p-6 border-2 border-primary/10 rounded-xl">
+                    <i data-lucide="cone" class="icon w-8 h-8 mx-auto mb-3 text-secondary"></i>
+                    <h3 class="font-semibold text-2xl mb-2 text-dark">Sculpture & Mixed Media</h3>
+                    <p class="text-sm text-gray-600">Bespoke 3D installations, metalwork, or mixed media pieces that require specific physical dimensions and materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Project Inquiry Form -->
+    <section id="commission-form" class="container mx-auto px-5 py-20 text-center">
+        <div class="max-w-4xl mx-auto bg-white p-10 rounded-xl shadow-2xl border-t-8 border-primary">
+            <h2 class="font-headline text-4xl font-bold text-dark mb-4">Tell Us About Your Dream Project</h2>
+            <p class="text-lg mb-8 text-text">
+                Fill out the details below, and our Curation Manager will contact you within 48 hours to begin the consultation.
+            </p>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                
+                <!-- Personal Info -->
+                <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Your Full Name" class="p-4 border-2 border-gray-200 rounded-lg focus:ring-1 focus:ring-primary focus:border-primary/50 transition" required>
+                    <input type="email" placeholder="Email Address" class="p-4 border-2 border-gray-200 rounded-lg focus:ring-1 focus:ring-primary focus:border-primary/50 transition" required>
+                </div>
+                
+                <!-- Project Details -->
+                <select class="md:col-span-1 p-4 border-2 border-gray-200 rounded-lg focus:ring-1 focus:ring-primary focus:border-primary/50 transition" required>
+                    <option value="" disabled selected>Select Art Style Preference</option>
+                    <option value="traditional">Traditional Folk (Warli, Madhubani)</option>
+                    <option value="contemporary">Contemporary Abstract</option>
+                    <option value="portraiture">Portraiture / Figurative</option>
+                    <option value="minimalist">Minimalist / Geometric</option>
+                    <option value="other">Other / Not Sure</option>
+                </select>
+                
+                <select class="md:col-span-1 p-4 border-2 border-gray-200 rounded-lg focus:ring-1 focus:ring-primary focus:border-primary/50 transition" required>
+                    <option value="" disabled selected>Target Budget Range (INR)</option>
+                    <option value="10k-30k">₹10,000 - ₹30,000</option>
+                    <option value="30k-70k">₹30,000 - ₹70,000</option>
+                    <option value="70k+">₹70,000+</option>
+                </select>
+                
+                <textarea placeholder="Describe your vision (e.g., subject matter, colors, desired size in inches/cm, space it will occupy)" rows="6" class="md:col-span-2 p-4 border-2 border-gray-200 rounded-lg focus:ring-1 focus:ring-primary focus:border-primary/50 transition" required></textarea>
+                
+                <p class="md:col-span-2 text-sm text-gray-500 mt-2">
+                    *Note: Please include as many details as possible for the most accurate initial quote.
+                </p>
+
+                <button type="submit" class="md:col-span-2 mt-6 px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold text-lg rounded-lg shadow-lg transition duration-300 transform hover:scale-[1.01]">
+                    Submit Commission Inquiry
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-300 text-center p-10 mt-10 shadow-inner">
+        <p class="font-headline text-lg mb-3">ARTBOND INDIA</p>
+        <p class="text-sm mb-1">The Canvas of India | Custom Commissions | Corporate Art Solutions</p>
+        <p class="text-xs opacity-75 mt-3">© 2025 ArtBond India — All Rights Reserved</p>
+    </footer>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

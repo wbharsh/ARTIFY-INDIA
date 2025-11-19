@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Art Solutions | ARTBOND INDIA</title>
+    <!-- Custom Fonts --><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN --><script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Tailwind Custom Configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#581c87', // Deep Artistic Violet/Indigo
+                        secondary: '#fcd34d', // Gold Accent
+                        dark: '#1e1e2d', // Rich Dark Background
+                        light: '#f7f3f9', // Off-white with a hint of warmth
+                        text: '#4a4e69', // Muted Dark Text
+                    },
+                    fontFamily: {
+                        headline: ['Playfair Display', 'serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: theme('colors.text');
+            line-height: 1.7;
+            background-color: theme('colors.light');
+        }
+        /* Icon styling */
+        .icon {
+            stroke: theme('colors.primary');
+            stroke-width: 1.5;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar --><header class="flex justify-between items-center py-5 px-5 lg:px-10 bg-white border-b-2 border-primary shadow-lg">
+        <div class="font-headline text-2xl font-bold tracking-wider text-primary">ARTBOND INDIA</div>
+        <nav class="hidden sm:flex space-x-6">
+            <a href="/" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">HOME</a>
+            <a href="/about" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">ABOUT</a>
+            <a href="/gallery" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">GALLERY</a>
+            <a href="/corporate" class="text-primary font-bold text-sm uppercase transition duration-300 border-b-2 border-primary">CORPORATE</a>
+            <a href="/custom" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">COMMISSION</a>
+            <a href="/contact" class="text-text hover:text-primary font-semibold text-sm uppercase transition duration-300">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section: Value Proposition --><section class="bg-dark text-white py-20 px-5 text-center shadow-2xl">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-secondary uppercase text-sm font-semibold tracking-widest mb-3 block">Corporate Art Solutions</span>
+            <h1 class="font-headline text-5xl sm:text-7xl mb-6 font-bold leading-tight">
+                Curate an Environment that <span class="text-secondary">Inspires Trust</span> and <span class="text-secondary">Innovation</span>
+            </h1>
+            <p class="text-xl opacity-80 max-w-2xl mx-auto">
+                Elevate your workspace, hotels, and commercial properties with original, museum-quality Indian art that reflects your brand's global vision and cultural depth.
+            </p>
+            <a href="#contact-section" class="inline-block mt-10 px-8 py-3 bg-primary hover:bg-opacity-90 text-white font-bold rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                Start Your Project Consultation
+            </a>
+        </div>
+    </section>
+    
+    <!-- Core Services Section --><section class="container mx-auto px-5 py-16">
+        <h2 class="font-headline text-4xl text-center text-dark mb-12 font-bold">Our End-to-End Solutions</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Service Card 1 --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary/70">
+                <i data-lucide="layout-grid" class="icon w-8 h-8 mb-4"></i>
+                <h3 class="font-bold text-xl mb-3 text-dark">Space Planning & Curation</h3>
+                <p class="text-sm text-gray-600">We analyze your space, lighting, and brand identity to recommend the perfect mix of styles, mediums, and sizes to fit your architectural narrative.</p>
+            </div>
+
+            <!-- Service Card 2 --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary/70">
+                <i data-lucide="palette" class="icon w-8 h-8 mb-4"></i>
+                <h3 class="font-bold text-xl mb-3 text-dark">Custom Commissions</h3>
+                <p class="text-sm text-gray-600">Work directly with our premier artists to create bespoke collections, ensuring unique pieces that perfectly match your corporate color scheme and theme.</p>
+            </div>
+
+            <!-- Service Card 3 --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary/70">
+                <i data-lucide="shopping-bag" class="icon w-8 h-8 mb-4"></i>
+                <h3 class="font-bold text-xl mb-3 text-dark">Bulk Procurement & Leasing</h3>
+                <p class="text-sm text-gray-600">Access our entire catalog at preferential corporate pricing. Options for flexible art leasing programs are also available for short-term projects.</p>
+            </div>
+
+            <!-- Service Card 4 --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary/70">
+                <i data-lucide="tool" class="icon w-8 h-8 mb-4"></i>
+                <h3 class="font-bold text-xl mb-3 text-dark">Installation & Maintenance</h3>
+                <p class="text-sm text-gray-600">Professional, secure installation handled by our certified team, ensuring safety and optimal presentation, followed by optional maintenance plans.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Focus Section (Now with Direct Image Link) --><section class="bg-white py-16 px-5 shadow-inner">
+        <div class="container mx-auto">
+            <div class="lg:flex lg:space-x-12 items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <!-- Direct Image Link --><img src="static/4.png" 
+                         alt="Contemporary Art in a Corporate Setting" 
+                         class="rounded-xl shadow-2xl w-full object-cover h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="font-headline text-4xl font-bold text-dark mb-6">Partnership Across Industries</h2>
+                    <p class="text-lg mb-8">
+                        Our collections are thoughtfully chosen to complement and enhance specific commercial environments. ArtBond India works closely with leaders in design and development across these sectors:
+                    </p>
+                    <ul class="grid grid-cols-2 gap-4 text-dark font-medium">
+                        <li class="flex items-center space-x-2"><i data-lucide="building-2" class="icon w-5 h-5"></i><span>Real Estate & Developers</span></li>
+                        <li class="flex items-center space-x-2"><i data-lucide="hotel" class="icon w-5 h-5"></i><span>Boutique & Luxury Hotels</span></li>
+                        <li class="flex items-center space-x-2"><i data-lucide="briefcase" class="icon w-5 h-5"></i><span>Corporate Offices & Tech Parks</span></li>
+                        <li class="flex items-center space-x-2"><i data-lucide="banknote" class="icon w-5 h-5"></i><span>Financial Institutions</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation/Contact CTA Section --><section id="contact-section" class="container mx-auto px-5 py-20 text-center">
+        <div class="max-w-3xl mx-auto bg-white p-10 rounded-xl shadow-2xl border-b-8 border-secondary">
+            <h2 class="font-headline text-4xl font-bold text-primary mb-4">Ready to Transform Your Space?</h2>
+            <p class="text-lg mb-8 text-dark">
+                Contact our Corporate Curation team today to schedule a free, no-obligation consultation. We'll help you define your project scope and budget.
+            </p>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <input type="text" placeholder="Your Name" class="p-3 border-2 border-gray-200 rounded-lg focus:border-primary/50 transition" required>
+                <input type="email" placeholder="Work Email" class="p-3 border-2 border-gray-200 rounded-lg focus:border-primary/50 transition" required>
+                <input type="text" placeholder="Company Name" class="p-3 border-2 border-gray-200 rounded-lg focus:border-primary/50 transition" required>
+                <input type="tel" placeholder="Phone Number" class="p-3 border-2 border-gray-200 rounded-lg focus:border-primary/50 transition">
+                <textarea placeholder="Project Details or Inquiry" rows="4" class="md:col-span-2 p-3 border-2 border-gray-200 rounded-lg focus:border-primary/50 transition" required></textarea>
+                <button type="submit" class="md:col-span-2 mt-4 px-8 py-3 bg-secondary hover:bg-secondary/90 text-dark font-bold rounded-lg shadow-md transition duration-300">
+                    Request Corporate Portfolio
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer --><footer class="bg-dark text-slate-300 text-center p-10 mt-10 shadow-inner">
+        <p class="font-headline text-lg mb-3">ARTBOND INDIA</p>
+        <p class="text-sm mb-1">The Canvas of India | Custom Commissions | Corporate Art Solutions</p>
+        <p class="text-xs opacity-75 mt-3">© 2025 ArtBond India — All Rights Reserved</p>
+    </footer>
+    
+    <!-- Initialize Lucide Icons --><script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
